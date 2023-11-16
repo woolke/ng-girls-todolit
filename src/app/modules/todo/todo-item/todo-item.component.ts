@@ -1,22 +1,9 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {TodoItem} from "../interfaces/todo-item";
+import {TodoItem} from "../../../domain/todo/model/todo-item";
 
 @Component({
   selector: 'app-todo-item',
-  template: `
-    <div>
-      <input type="checkbox"
-             class="todo-checkbox"
-             (click)="completeItem()"
-             [checked]="item.completed"/>
-      <span class="todo-title" [ngClass]="{'todo-complete': item.completed}">
-  {{ item.title }}
-        <button class="btn btn-red" (click)="removeItem()">
-      remove
-    </button>
-</span>
-    </div>
-  `,
+  templateUrl: './todo-item.component.html',
   styleUrls: ['./todo-item.component.scss']
 })
 export class TodoItemComponent {

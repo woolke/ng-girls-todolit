@@ -1,22 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { TodoItem } from '../interfaces/todo-item';
-import {TodoListService} from "../services/todo-list.service";
+import { TodoItem } from '../../../domain/todo/model/todo-item';
+import {TodoListService} from "../../../domain/todo/todo-list.service";
 
 @Component({
   selector: 'app-list-manager',
-  template: `
-    <div class="todo-app">
-      <app-input-button-unit (submit)="addItem($event)"></app-input-button-unit>
-
-      <ul>
-        <li *ngFor="let todoItem of todoList">
-          <app-todo-item [item]="todoItem"
-                         (remove)="removeItem($event)"
-                         (update)="updateItem($event.item, $event.changes)"></app-todo-item>
-        </li>
-      </ul>
-    </div>
-  `,
+  templateUrl: './list-manager.component.html',
   styleUrls: ['./list-manager.component.scss']
 })
 export class ListManagerComponent implements OnInit {

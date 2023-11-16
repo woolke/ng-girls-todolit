@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { TodoItem } from '../interfaces/todo-item';
-import { StorageService } from './storage.service';
+import { TodoItem } from './model/todo-item';
+import { StorageService } from '../common/storage.service';
 
 const todoListStorageKey = 'Todo_List';
 

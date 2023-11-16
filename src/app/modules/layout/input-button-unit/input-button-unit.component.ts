@@ -2,17 +2,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-input-button-unit',
-  template: `
-    <input class="todo-input"
-           #inputElementRef
-           [value]="title"
-           (keyup.enter)="submitValue(getInputValue($event))">
-
-    <button class="btn"
-            (click)="submitValue(inputElementRef.value)">
-      Save
-    </button>
-  `,
+  templateUrl: './input-button-unit.component.html',
   styleUrls: ['./input-button-unit.component.scss']
 })
 export class InputButtonUnitComponent implements OnInit {
